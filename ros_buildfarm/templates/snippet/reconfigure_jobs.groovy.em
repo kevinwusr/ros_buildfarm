@@ -59,6 +59,9 @@ skipped_views = 0
 //def result = sh(script: 'uname', returnStdout: true)
 //println result
 
+
+def list = []
+
 def test_dir = new File("/tmp/")
 test_dir.eachFileRecurse (FileType.FILES) { file ->
   list << file
