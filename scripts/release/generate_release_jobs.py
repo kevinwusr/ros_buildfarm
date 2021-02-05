@@ -36,7 +36,7 @@ def main(argv=sys.argv[1:]):
     add_argument_dry_run(parser)
     add_argument_package_names(parser)
     args = parser.parse_args(argv)
-
+    print("do configure_release_jobs", file=sys.stderr)
     return configure_release_jobs(
         args.config_url, args.rosdistro_name, args.release_build_name,
         groovy_script=args.groovy_script, dry_run=args.dry_run,
