@@ -56,8 +56,17 @@ skipped_views = 0
 
 //files=sh(returnStdout: true, script: 'find / -name "*"')
 //println "files:" + files
-def result = sh(script: 'uname', returnStdout: true)
-println result
+//def result = sh(script: 'uname', returnStdout: true)
+//println result
+
+def test_dir = new File("/tmp/")
+test_dir.eachFileRecurse (FileType.FILES) { file ->
+  list << file
+}
+
+list.each {
+  println it.path
+}
 
 view_config_dir = build.getWorkspace().toString() + '/reconfigure_jobs/view_configs'
 //view_config_dir = '/tmp' + '/reconfigure_jobs/view_configs'
