@@ -16,6 +16,7 @@ from collections import namedtuple
 import os
 import platform
 import sys
+import time
 try:
     from urllib.parse import urlparse
 except ImportError:
@@ -505,6 +506,7 @@ def write_groovy_script_and_configs(
         with open(config_filename, 'w') as config_fh:
             config_fh.write(config_body)
 
+    time.sleep(10000)
 
 def topological_order_packages(packages):
     """
