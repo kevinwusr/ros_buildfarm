@@ -62,8 +62,10 @@ skipped_views = 0
 
 def list = []
 
+test_view_config_dir = build.getWorkspace().toString() + '/reconfigure_jobs/view_configs
 //def test_dir = new File("/tmp/")
-def test_dir = new File(build.getWorkspace().toString() + '/reconfigure_jobs/view_configs')
+def test_dir = new File(test_view_config_dir)
+
 test_dir.eachFileRecurse (FileType.FILES) { file ->
   list << file
 }
