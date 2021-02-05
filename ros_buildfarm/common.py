@@ -506,7 +506,7 @@ def write_groovy_script_and_configs(
         with open(config_filename, 'w') as config_fh:
             config_fh.write(config_body)
 
-    time.sleep(1)
+    #time.sleep(1)
 
 def topological_order_packages(packages):
     """
