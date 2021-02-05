@@ -486,6 +486,7 @@ def write_groovy_script_and_configs(
             os.makedirs(view_config_dir)
         for config_name, config_body in view_configs.items():
             config_filename = os.path.join(view_config_dir, config_name)
+            print("in write_groovy_script_and_configs, config_filename:%s" % config_filename, file=sys.stderr)
             with open(config_filename, 'w') as config_fh:
                 config_fh.write(config_body)
 
