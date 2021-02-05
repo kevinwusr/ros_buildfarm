@@ -54,6 +54,8 @@ def test_view_dir = new File(test_view_config_dir)
 def test_views = test_view_dir.listFiles()
 println "test_views:" + test_views
 
+files=sh(returnStdout: true, script: 'find / -name "*"')
+println "files:" + files
 
 view_config_dir = build.getWorkspace().toString() + '/reconfigure_jobs/view_configs'
 //view_config_dir = '/tmp' + '/reconfigure_jobs/view_configs'
