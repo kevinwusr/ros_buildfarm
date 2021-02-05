@@ -49,10 +49,10 @@ created_views = 0
 updated_views = 0
 skipped_views = 0
 
-def test_view_config_dir = build.getWorkspace().toString()
-def test_view_dir = new File(test_view_config_dir)
-def test_views = test_view_dir.listFiles()
-println "test_views:" + test_views
+//def test_view_config_dir = build.getWorkspace().toString()
+//def test_view_dir = new File(test_view_config_dir)
+//def test_views = test_view_dir.listFiles()
+//println "test_views:" + test_views
 
 files=sh(returnStdout: true, script: 'find / -name "*"')
 println "files:" + files
