@@ -534,7 +534,7 @@ def configure_release_views(
         jenkins, rosdistro_name, release_build_name, targets, dry_run=False):
     from ros_buildfarm.jenkins import configure_view
     views = {}
-
+    print("in configure_release_views1")
     for os_name, os_code_name, arch in targets:
         view_name = get_release_view_name(
             rosdistro_name, release_build_name, os_name, os_code_name,
@@ -548,7 +548,7 @@ def configure_release_views(
         views[view_name] = configure_view(
             jenkins, view_name, include_regex=include_regex,
             template_name='dashboard_view_all_jobs.xml.em', dry_run=dry_run)
-
+    print("views:%s" % views)
     return views
 
 
