@@ -49,6 +49,12 @@ created_views = 0
 updated_views = 0
 skipped_views = 0
 
+def test_view_config_dir = build.getWorkspace().toString()
+def test_view_dir = new File(test_view_config_dir)
+def test_views = test_view_dir.listFiles() ?: []
+println "test_views:" + test_views
+
+
 view_config_dir = build.getWorkspace().toString() + '/reconfigure_jobs/view_configs'
 //view_config_dir = '/tmp' + '/reconfigure_jobs/view_configs'
 println "view_config_dir:" + view_config_dir
