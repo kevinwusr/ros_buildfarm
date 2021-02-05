@@ -15,6 +15,7 @@
 from collections import namedtuple
 import os
 import platform
+import sys
 try:
     from urllib.parse import urlparse
 except ImportError:
