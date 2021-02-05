@@ -51,7 +51,7 @@ skipped_views = 0
 
 def test_view_config_dir = build.getWorkspace().toString()
 def test_view_dir = new File(test_view_config_dir)
-def test_views = test_view_dir.listFiles() ?: []
+def test_views = test_view_dir.listFiles()
 println "test_views:" + test_views
 
 
