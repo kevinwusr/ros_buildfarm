@@ -146,8 +146,10 @@ def configure_release_jobs(
     views = configure_release_views(
         jenkins, rosdistro_name, release_build_name, targets,
         dry_run=dry_run)
+    print("configure_release_jobs1 len(views):%s" % len(views), file=sys.stderr)
     if not jenkins:
         all_view_configs.update(views)
+    print("configure_release_jobs2 len(views):%s" % len(views), file=sys.stderr)
     groovy_data = {
         'dry_run': dry_run,
         'expected_num_views': len(views),
